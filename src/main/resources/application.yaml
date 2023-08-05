@@ -1,0 +1,47 @@
+server:
+  port: 8080
+  #session过期时间
+  servlet:
+    session:
+      timeout: 86400
+    context-path: /api
+mybatis-plus:
+  configuration:
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl # 查看日志
+    map-underscore-to-camel-case: true
+
+  global-config:
+    db-config:
+      logic-delete-field: isdeleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+spring:
+  redis:
+    port: 6379
+    host: localhost
+    database: 0
+  application:
+    name: user-center
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/user-center?serverTimezone=GMT%2B8&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: lcy84838559
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  # 处理SpringBoot2.6.x与Swagger2 3.0.0版本冲突
+  mvc:
+      pathmatch:
+        matching-strategy: ant_path_matcher
+
+
+  #thymeleaf:
+    #content-type: text/html
+    #cache: false
+    #mode: LEGACYHTML5
+  session:
+    store-type: redis
+    timeout: 86400
