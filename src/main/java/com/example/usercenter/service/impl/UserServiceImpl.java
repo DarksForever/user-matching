@@ -1,5 +1,6 @@
 package com.example.usercenter.service.impl;
 
+import cn.hutool.core.lang.Pair;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.example.usercenter.bean.Vo.UserVO;
@@ -11,7 +12,6 @@ import com.example.usercenter.service.UserService;
 import com.example.usercenter.bean.User;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
-import javafx.util.Pair;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Service;
